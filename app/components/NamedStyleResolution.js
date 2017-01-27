@@ -7,11 +7,11 @@ import React from 'react';
 import table from './table.css';
 
 export default () => {
-  return <div styleName='table.table'>
-    <div styleName='table.row'>
-      <div styleName='table.cell'>A1</div>
-      <div styleName='table.cell'>B1</div>
-      <div styleName='table.cell'>C1</div>
+  return <div className={table.table}>
+    <div className={table.row}>
+      <div className={table.cell}>A1</div>
+      <div className={table.cell}>B1</div>
+      <div className={table.cell}>C1</div>
     </div>
   </div>;
 };

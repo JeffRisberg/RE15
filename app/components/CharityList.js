@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { queryCharities } from '../actions/charities';
 
-import './charities.css';
+import charities from './charities.scss';
 
 class CharityList extends React.Component {
 
@@ -19,10 +19,10 @@ class CharityList extends React.Component {
 
             return (
                 <div key={key}>
-                    <div styleName="name">
+                    <div className={charities.name}>
                         {charity.name}
                     </div>
-                    <div styleName="description">
+                    <div className={charities.description}>
                         {charity.description}
                     </div>
                 </div>
@@ -30,7 +30,7 @@ class CharityList extends React.Component {
         });
 
         return (
-            <div styleName="charities">
+            <div className={charities.table}>
                 Here are the charities:
                 <div>
                     {charityNodes}

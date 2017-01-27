@@ -18,16 +18,19 @@ module.exports = {
             },
             {
                 include: path.resolve(__dirname, './app'),
+                loaders: [
+                    'style-loader',
+                    'css-loader?importLoader=1&modules&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
+                    'sass-loader'
+                ],
+                test: /\.scss$/
+            },
+            {
+                include: path.resolve(__dirname, './app'),
                 loader: 'babel-loader',
                 query: {
                     plugins: [
-                        'transform-react-jsx',
-                        [
-                            'react-css-modules',
-                            {
-                                context
-                            }
-                        ]
+                        'transform-react-jsx'
                     ]
                 },
                 test: /\.js$/

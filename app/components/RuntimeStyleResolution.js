@@ -4,14 +4,14 @@
  */
 
 import React from 'react';
-import './table.css';
+import table from './table.css';
 
 export default () => {
-  return <div styleName='table'>
-    <div styleName='row'>
-      <div styleName={'cell' + (Math.random() > 0.5 ? ' yellow' : '')}>A2</div>
-      <div styleName={'cell' + (Math.random() > 0.5 ? ' yellow' : '')}>B2</div>
-      <div styleName={'cell' + (Math.random() > 0.5 ? ' yellow' : '')}>C2</div>
+  return <div className={table.table}>
+    <div className={table.row}>
+      <div className={'table.cell' + (Math.random() > 0.5 ? ' yellow' : '')}>A2</div>
+      <div className={'table.cell' + (Math.random() > 0.5 ? ' yellow' : '')}>B2</div>
+      <div className={'table.cell' + (Math.random() > 0.5 ? ' yellow' : '')}>C2</div>
     </div>
   </div>;
 };

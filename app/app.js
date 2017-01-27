@@ -7,7 +7,6 @@ import thunkMiddleware from 'redux-thunk';
 
 import charities from './reducers/charities';
 
-import AnonymousStyleResolution from './components/AnonymousStyleResolution';
 import NamedStyleResolution from './components/NamedStyleResolution';
 import RuntimeStyleResolution from './components/RuntimeStyleResolution';
 import CharityList from './components/CharityList';
@@ -29,7 +28,6 @@ const store = createStore(
 ReactDom.render(
     <Provider store={store}>
         <div>
-            <AnonymousStyleResolution />
             <NamedStyleResolution />
             <RuntimeStyleResolution />
             <br/>
