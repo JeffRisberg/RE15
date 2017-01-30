@@ -23,6 +23,17 @@
   background: #00f;
 }
 
-.yellow {
-  background: #ff0!important;
+.bold_cell {
+  composes: cell;
+  font-weight: bold;
+}
+
+.italic_cell {
+  composes: cell;
+  font-style: italic;
+}
+
+.underline_cell {
+  composes: cell;
+  text-decoration: underline;
 }

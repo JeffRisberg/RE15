@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
 var nedb = require('nedb');
 
 app.charitiesDB = new nedb({filename: 'charities', autoload: true});
+app.donationsDB = new nedb({filename: 'donations', autoload: true});
 
 mocks.forEach(function (route) {
     route(app);

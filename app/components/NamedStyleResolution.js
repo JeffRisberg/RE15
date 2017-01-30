@@ -1,5 +1,5 @@
 /**
- * @file Demonstrates named "styleName" resolution.
+ * @file Demonstrates named styles resolution.
  * @see https://github.com/gajus/babel-plugin-react-css-modules#named-stylename-resolution
  */
 
