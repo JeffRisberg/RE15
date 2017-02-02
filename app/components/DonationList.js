@@ -15,8 +15,6 @@ class DonationList extends React.Component {
         const records = this.props.donations.idList.map(id => this.props.donations.records[id]);
 
         const donationNodes = records.map((donation, key) => {
-            const id = donation.id;
-
             return (
                 <div key={key}>
                     <div className={donations.id}>
