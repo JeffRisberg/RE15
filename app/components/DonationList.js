@@ -16,24 +16,21 @@ class DonationList extends React.Component {
 
         const donationNodes = records.map((donation, key) => {
             return (
-                <div key={key}>
-                    <div className={donations.id}>
+                <tr key={key}>
+                    <td className={donations.id}>
                         {donation.id}
-                    </div>
-                    <div className={donations.amount}>
+                    </td>
+                    <td className={donations.amount}>
                         {donation.amount}
-                    </div>
-                </div>
+                    </td>
+                </tr>
             );
         });
 
         return (
-            <div className={donations.table}>
-                Here are the donations:
-                <div>
-                    {donationNodes}
-                </div>
-            </div>
+            <table className={donations.table}>
+                {donationNodes}
+            </table>
         );
     }
 }

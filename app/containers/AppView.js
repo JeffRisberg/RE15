@@ -2,11 +2,15 @@ import React from 'react';
 
 import { Link } from 'react-router'
 
-class AppRoot extends React.Component {
+import body from '../styles/re16.scss';
+
+class AppView extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className={body}>
+                <img src="/images/logo.gif"/>
+                <br/>
                 <Link to="/">Home</Link>
                 <br/>
                 <Link to="/charities">Charities</Link>
@@ -22,4 +26,4 @@ class AppRoot extends React.Component {
     }
 }
 
-export default AppRoot;
+export default AppView;

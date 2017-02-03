@@ -9,10 +9,8 @@ import thunkMiddleware from 'redux-thunk'
 import charities from './reducers/charities'
 import donations from './reducers/donations'
 
-import AppRoot from './components/AppRoot'
+import AppView from './containers/AppView'
 import Home from './components/Home'
-import NamedStyleResolution from './components/NamedStyleResolution'
-import ComposedStyleResolution from './components/ComposedStyleResolution'
 import CharityList from './components/CharityList'
 import DonationList from './components/DonationList'
 
@@ -35,11 +33,8 @@ const store = createStore(
 ReactDom.render(
     <Provider store={store}>
         <div>
-            <NamedStyleResolution />
-            <ComposedStyleResolution />
-            <br/>
             <Router history={hashHistory}>
-                <Route path="/" component={AppRoot}>
+                <Route path="/" component={AppView}>
                     <IndexRoute component={Home}/>
                     <Route path="charities" component={CharityList}/>
                     <Route path="donations" component={DonationList}/>
